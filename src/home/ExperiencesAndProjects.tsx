@@ -6,7 +6,12 @@ const ExperiencesAndProjects: Component = () => {
     return (
         <>
             <div className="container mx-auto py-10">
-                <h2 className="text-center text-2xl md:text-4xl mb-8 lg:mb-16">Expériences et <span className="text-amber-400">projets</span></h2>
+                <div className="flex">
+                <h2 className="mx-auto text-2xl md:text-4xl">
+                    Expériences et <span className="text-amber-400">projets</span>
+                    <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
+                </h2>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-black pt-8 pl-8 flex flex-col">
                         <h3 className="text-5xl font-bold">iziA</h3>
