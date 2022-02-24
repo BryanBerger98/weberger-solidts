@@ -9,13 +9,13 @@ const Navbar: Component = () => {
                 WeBerger
             </Link>
             <ul class="list-none flex ml-auto my-auto">
-                <li class="px-2 my-auto font-thin">
-                    <Link href="/">
+                <li class="px-2 my-auto font-light text-lg">
+                    <Link href="/projects">
                         Projets
                     </Link>
                 </li>
-                <li class="px-2 my-auto font-thin">Mon parcours</li>
-                <li class="px-2 my-auto font-thin">Travailler ensemble</li>
+                <li class="px-2 my-auto font-light text-lg">Mon parcours</li>
+                <li class="px-2 my-auto font-light text-lg">Travailler ensemble</li>
             </ul>
         </nav>
     );

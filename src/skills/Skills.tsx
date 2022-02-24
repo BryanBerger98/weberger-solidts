@@ -18,6 +18,7 @@ import vsCodeLogo from "../assets/VisualStudioCode_logo.png";
 import gitLogo from "../assets/Git_logo.png";
 import appleLogo from "../assets/Apple_logo.png";
 import adobeXDLogo from "../assets/AdobeXD_logo.png";
+import Footer from "../common/Footer";
 
 const Skills: Component = () => {
 
@@ -152,6 +153,7 @@ const Skills: Component = () => {
                     )}
                 </For>
             </div>
+            <Footer />
         </>
     );
 
