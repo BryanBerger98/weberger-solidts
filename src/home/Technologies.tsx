@@ -3,6 +3,7 @@ import angularLogo from '../assets/Angular_logo.png';
 import nodeLogo from '../assets/Nodejs_logo.png';
 import firebaseLogo from '../assets/Firebase_logo.png';
 import mongoDBLogo from '../assets/MongoDB_logo.png';
+import { Link } from "solid-app-router";
 
 const Technologies: Component = () => {
     return (
@@ -41,7 +42,9 @@ const Technologies: Component = () => {
                     </div>
                 </div>
                 <div className="flex py-5">
-                    <button className="mx-auto">Voir toutes mes compétences <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
+                    <Link href="/skills" className="mx-auto">
+                        <button type="button">Voir toutes mes compétences <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>    
+                    </Link>
                 </div>
             </div>
 
