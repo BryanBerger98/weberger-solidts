@@ -4,6 +4,7 @@ import Home from './home/Home';
 import Navbar from './common/Navbar';
 import Skills from './skills/Skills';
 import Projects from './projects/Projects';
+import SingleProject from './projects/SingleProject';
 
 const App: Component = () => {
   return (
@@ -13,6 +14,7 @@ const App: Component = () => {
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:id" element={<SingleProject />} />
         <Route path="/*all" element={<Home />} />
       </Routes>
     </>

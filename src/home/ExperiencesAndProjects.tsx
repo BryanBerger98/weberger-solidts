@@ -1,49 +1,34 @@
-import { Component } from "solid-js";
-import iziADashboard from '../assets/iziA_dashboard.jpeg';
-import joinerWebsite from '../assets/joiner_website.jpeg';
+import { Link } from "solid-app-router";
+import { Component, For, Show } from "solid-js";
+import Project from "../interfaces/project.interface";
+import ProjectCardTemplate from "../projects/templates/ProjectCardTemplate";
+import { getProjectsToShowOnHomePage } from "../services/projects.service";
 
 const ExperiencesAndProjects: Component = () => {
-    return (
-        <>
-            <div className="container mx-auto py-10">
-                <div className="flex">
-                <h2 className="mx-auto text-2xl md:text-4xl">
-                    Expériences et <span className="text-amber-400">projets</span>
-                    <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
-                </h2>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-black pt-8 pl-8 flex flex-col">
-                        <h3 className="text-5xl font-bold">iziA</h3>
-                        <h4 className="text-2xl mb-5">Application métier pour le CFA AFIA</h4>
-                        <p className="text-neutral-400 mb-3">
-                            Mon plus gros projet lors de mon expérience de
-                            CTO à Joiner. Une application permettant au client
-                            de gérer ses contrats d’apprentissage et
-                            d’optimiser les coûts de ceux-ci.
-                        </p>
-                        <button className="mb-5 text-xl mr-auto">En savoir plus <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
-                        <img src={iziADashboard} alt="iziA Dashboard" className="w-full rounded-tl-3xl mt-auto" />
-                    </div>
-                    <div className="bg-black pt-8 pl-8 flex flex-col">
-                        <h3 className="text-5xl font-bold">Joiner</h3>
-                        <h4 className="text-2xl mb-5">Centre de formation - ESN</h4>
-                        <p className="text-neutral-400 mb-3">
-                        CTO chez Joiner de 2019 à 2021. Une expérience
-                        d’un an et demi très riche en connaissances et en
-                        compétences. Autant au niveau technique que
-                        humain.
-                        </p>
-                        <button className="mb-5 text-xl mr-auto">En savoir plus <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
-                        <img src={joinerWebsite} alt="Joiner Website" className="w-full rounded-tl-3xl mt-auto" />
-                    </div>
-                </div>
-                <div className="flex mt-3 lg:mt-5 xl:mt-10 py-5">
-                    <button className="mx-auto">Voir tous les projets et expériences <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
-                </div>
-            </div>
 
-        </>
+    const projects: Project[] = getProjectsToShowOnHomePage();
+
+    return (
+        <div className="container mx-auto py-10">
+            <div className="flex">
+            <h2 className="mx-auto text-2xl md:text-4xl">
+                Expériences et <span className="text-amber-400">projets</span>
+                <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
+            </h2>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+                <For each={projects}>
+                    {(project, index) => (
+                        <ProjectCardTemplate project={project} projectIndex={index()}/>
+                    )}
+                </For>
+            </div>
+            <div className="flex mt-3 lg:mt-5 xl:mt-10 py-5">
+                <Link className="mx-auto" href="/projects">
+                    Voir tous les projets et expériences <i class="fa-light fa-arrow-right ml-3 text-lg"></i>
+                </Link>
+            </div>
+        </div>
     );
 };
 

@@ -3,6 +3,7 @@ import codeInstroctorLogo from '../assets/code_instructor_logo.png';
 import g2rLogo from '../assets/g2r_logo.png';
 import konexioLogo from '../assets/konexio_logo_white.jpg';
 import cfaAfiaLogo from '../assets/cfa_afia_logo.jpg';
+import { Link } from "solid-app-router";
 
 const Technologies: Component = () => {
     return (
@@ -41,7 +42,9 @@ const Technologies: Component = () => {
                     </div>
                 </div>
                 <div className="flex py-5">
-                    <button className="mx-auto bg-amber-400 text-black py-2 px-4" type="button">Travailler ensemble <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
+                    <Link href="https://www.linkedin.com/in/bryanbrg/" target="_blank" className="mx-auto bg-amber-400 text-black py-2 px-4">
+                        Travailler ensemble <i class="fa-light fa-arrow-right ml-3 text-lg"></i>
+                    </Link>
                 </div>
             </div>
 

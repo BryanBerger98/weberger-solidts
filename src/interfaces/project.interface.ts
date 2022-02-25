@@ -5,5 +5,11 @@ export default interface Project {
     type: 'professional' | 'personnal' | 'other';
     description: string;
     mainPhoto: string;
-    technologies: any[];
+    technologies: number[];
+    projectUrl: {
+        hasInternalUrl: boolean;
+        externalUrl?: string;
+        externalTarget?: '_blank' | '_self' | '_parent' | '_top';
+    }
+    showOnHomePage: boolean;
 }

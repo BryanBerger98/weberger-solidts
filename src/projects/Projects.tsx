@@ -1,60 +1,67 @@
-import { Component, For } from "solid-js";
+import { Component, For, Show } from "solid-js";
 import PageIntro from "../common/PageIntro";
 import bryanWork from "../assets/bryan_work.jpg";
 import Footer from "../common/Footer";
-import ProfessionalProjects from "./ProfessionalProjects";
+import ProjectCardTemplate from "./templates/ProjectCardTemplate";
+import ProjectBannerTemplate from "./templates/ProjectBannerTemplate";
 
-import joinerWebsite from "../assets/joiner_website.jpeg";
-import iziADashboard from "../assets/iziA_dashboard.jpeg";
-import fitFoodReceipes from "../assets/FitFood/fitfood_receipes_cropped.jpg";
-import campingCar from "../assets/camping_car.jpeg";
-import Project from "./interfaces/project.interface";
+import Project from "../interfaces/project.interface";
+import { getProjects } from "../services/projects.service";
 
 const Projects: Component = () => {
 
-    const projects: Project[] = [
-        {
-            title: 'Joiner',
-            subtitle: 'Centre de formation - ESN',
-            category: 'company',
-            type: 'professional',
-            description: 'CTO chez Joiner de 2019 à 2021. Une expérience d\'un an et demi très riche en connaissances et en compétences. Autant au niveau technique que humain.',
-            mainPhoto: joinerWebsite,
-            technologies: []
-        },
-        {
-            title: 'iziA',
-            subtitle: 'Application métier pour le CFA AFIA',
-            category: 'web_application',
-            type: 'professional',
-            description: 'Mon plus gros projet lors de mon expérience de CTO à Joiner. Une application permettant au client de gérer ses contrats d\'apprentissage et d\'optimiser les coûts de ceux-ci.',
-            mainPhoto: iziADashboard,
-            technologies: []
-        },
-        {
-            title: 'FitFood',
-            subtitle: 'Recettes, listes de courses et scan de produits',
-            category: 'mobile_application',
-            type: 'personnal',
-            description: 'Une application pour créer des recettes, gérer ses listes de courses et scanner des produits afin de connaître leur composition.',
-            mainPhoto: fitFoodReceipes,
-            technologies: []
-        },
-        {
-            title: 'Sky is Nowhere',
-            subtitle: 'Rénover un camping-car pour voyager',
-            category: 'youtube_channel',
-            type: 'other',
-            description: 'En mars dernier j\'ai acheté un camping-car pour pouvoir partir en voyage. Problème… il y a tout à refaire ! Je partage l\'évolution des travaux sur la chaîne YouTube "Sky is Nowhere” ainsi que d\'autres vidéos sur tout un tas de sujets !',
-            mainPhoto: campingCar,
-            technologies: []
-        }
-    ];
+    const projects: Project[] = getProjects();
 
     return(
         <>
             <PageIntro title="Mes projets" subtitle="Pro et perso" image={bryanWork} firstParagraph="Retrouvez ici tous mes projets web et mobile. Mais pas seulement ! Vous y verrez aussi mes projets personnels." />
-            <ProfessionalProjects projects={projects}/>
+            <div className="container mx-auto py-10">
+            <div className="flex">
+                <h2 className="mx-auto text-2xl md:text-4xl">
+                    <span className="text-amber-400">Projets</span> professionnels
+                    <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
+                </h2>
+            </div>
+            <div className="flex flex-wrap gap-4 mb-32 justify-center">
+                <For each={projects}>
+                    {(project, index) => (
+                        <Show when={project.type === 'professional'}>
+                            <ProjectCardTemplate project={project} projectIndex={index()}/>
+                        </Show>
+                    )}
+                </For>
+            </div>
+            <div className="flex">
+                <h2 className="mx-auto text-2xl md:text-4xl">
+                    Projets <span className="text-amber-400">personnels</span>
+                    <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
+                </h2>
+            </div>
+            <div className="flex flex-wrap gap-4 mb-32 justify-center">
+                <For each={projects}>
+                    {(project, index) => (
+                        <Show when={project.type === 'personnal'}>
+                            <ProjectCardTemplate project={project} projectIndex={index()}/>
+                        </Show>
+                    )}
+                </For>
+            </div>
+            <div className="flex">
+                <h2 className="mx-auto text-2xl md:text-4xl">
+                    <span className="text-amber-400">Autres activités</span> personnelles
+                    <hr className="border-0 h-px mb-8 lg:mb-16 w-1/2 bg-neutral-700" />
+                </h2>
+            </div>
+            <div className="flex flex-wrap gap-4 mb-32 justify-center">
+                <For each={projects}>
+                    {(project, index) => (
+                        <Show when={project.type === 'other'}>
+                            <ProjectBannerTemplate project={project} projectIndex={index()}/>
+                        </Show>
+                    )}
+                </For>
+            </div>
+        </div>
             <Footer />
         </>
     );
