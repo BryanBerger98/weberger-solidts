@@ -44,7 +44,7 @@ const PageIntro: Component<{title: string, subtitle: string, image: string, firs
                     </div>
                 </div>
                 <Show when={local.image} fallback={<div>No image</div>}>
-                    <div className="relative ml-auto mb-5 md:mb-auto bg-gradient-to-t from-amber-grey to-amber-500 h-72 md:h-96 w-72 md:w-96 order-first md:order-last">
+                    <div className="relative mx-auto md:ml-auto mb-5 md:mb-auto bg-gradient-to-t from-amber-grey to-amber-500 h-72 md:h-96 w-72 md:w-96 order-first md:order-last">
                         <img src={local.image} className="w-full absolute bottom-3 right-3" alt="Bryan BERGER" />
                     </div>
                 </Show>

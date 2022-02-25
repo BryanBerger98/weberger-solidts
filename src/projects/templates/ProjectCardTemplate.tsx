@@ -6,8 +6,6 @@ const ProjectCardTemplate: Component<{project: Project, projectIndex: number}> =
 
     const [local, other] = splitProps(props, ['project', 'projectIndex']);
 
-    console.log(local.projectIndex);
-
     const categories = {
         web_application: 'Application web',
         website: 'Site web',

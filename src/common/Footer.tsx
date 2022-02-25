@@ -5,7 +5,7 @@ const Footer: Component = () => {
 
     return(
         <footer className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:px-10 lg:pt-10 pb-20">
-            <div>
+            <div className="px-5 md:px-0">
                 <h2 className="text-4xl font-bold flex flex-col mb-3">
                     <span>Restons</span>
                     <span>connectés</span>
