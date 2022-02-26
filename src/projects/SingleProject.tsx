@@ -40,7 +40,7 @@ const SingleProject: Component = () => {
                         {(technology) => (
                             <div className="bg-black h-24 w-24 lg:h-32 lg:w-32 flex flex-col">
                                 <div className="px-5 mt-auto">
-                                    <img src={technology.imageUrl} alt={technology.name + ' logo'} className="w-3/4 mx-auto"/>
+                                    <img src={technology.imageUrl} alt={technology.name + ' logo'} loading="lazy" className="w-3/4 mx-auto"/>
                                 </div>
                                 <p className="text-center text-md lg:text-xl md:mt-auto mb-4">{technology.name}</p>
                             </div>
@@ -57,7 +57,7 @@ const SingleProject: Component = () => {
             </div>
             <Show when={project.mainPhoto} fallback={<div>No image</div>}>
                 <div className="ml-auto w-full md:pl-5">
-                    <img src={project.mainPhoto} className="w-full rounded-tl-3xl" alt={project.title} />
+                    <img src={project.mainPhoto} className="w-full rounded-tl-3xl" loading="lazy" alt={project.title} />
                 </div>
             </Show>
         </div>

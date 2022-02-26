@@ -18,25 +18,25 @@ const Technologies: Component = () => {
                 <div className="flex justify-center flex-wrap">
                     <div className="bg-black h-32 w-32 lg:h-44 lg:w-44 m-3 lg:m-5 xl:m-10 flex flex-col">
                         <div className="px-5 mt-auto">
-                            <img src={codeInstroctorLogo} alt="Angular logo" className="w-3/4 mx-auto"/>
+                            <img src={codeInstroctorLogo} alt="Code instructor logo" loading="lazy" className="w-3/4 mx-auto"/>
                         </div>
                         <p className="text-center text-xl mt-auto mb-4">Code Instructor</p>
                     </div>
                     <div className="bg-black h-32 w-32 lg:h-44 lg:w-44 m-3 lg:m-5 xl:m-10 flex flex-col">
                         <div className="px-5 mt-auto">
-                            <img src={g2rLogo} alt="Node JS logo" className="w-3/4 mx-auto"/>
+                            <img src={g2rLogo} alt="G2R Formations logo" loading="lazy" className="w-3/4 mx-auto"/>
                         </div>
                         <p className="text-center text-xl mt-auto mb-4">G2R Formations</p>
                     </div>
                     <div className="bg-black h-32 w-32 lg:h-44 lg:w-44 m-3 lg:m-5 xl:m-10 flex flex-col">
                         <div className="px-5 mt-auto">
-                            <img src={konexioLogo} alt="Firebase logo" className="w-3/4 mx-auto"/>
+                            <img src={konexioLogo} alt="Konexio logo" loading="lazy" className="w-3/4 mx-auto"/>
                         </div>
                         <p className="text-center text-xl mt-auto mb-4">Konexio</p>
                     </div>
                     <div className="bg-black h-32 w-32 lg:h-44 lg:w-44 m-3 lg:m-5 xl:m-10 flex flex-col">
                         <div className="px-5 mt-auto">
-                            <img src={cfaAfiaLogo} alt="MongoDB logo" className="w-3/4 mx-auto"/>
+                            <img src={cfaAfiaLogo} alt="CFA AFIA logo" loading="lazy" className="w-3/4 mx-auto"/>
                         </div>
                         <p className="text-center text-xl mt-auto mb-4">CFA AFIA</p>
                     </div>

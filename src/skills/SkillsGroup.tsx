@@ -16,7 +16,7 @@ const SkillsGroup: Component<{skillGroup: SkillsGroupInterface}> = (props) => {
                         {(skill) => (
                             <div className="m-auto h-20 w-20 lg:h-28 lg:w-28 lg:m-5 xl:m-10 flex flex-col">
                                 <div className="mt-auto p-1">
-                                    <img src={skill.imageUrl} alt={skill.name + ' logo'} className="w-3/4 mx-auto"/>
+                                    <img src={skill.imageUrl} alt={skill.name + ' logo'} loading="lazy" className="w-3/4 mx-auto"/>
                                 </div>
                                 <p className="text-center lg:text-xl mt-auto">{skill.name}</p>
                             </div>

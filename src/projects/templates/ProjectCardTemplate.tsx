@@ -21,7 +21,7 @@ const ProjectCardTemplate: Component<{project: Project, projectIndex: number}> =
                 <h4 className="text-xl lg:text-2xl mb-5">{ categories[local.project.category] }</h4>
                 <p className="text-neutral-400 mb-3">{ local.project.description }</p>
                 <button className="mb-5 text-xl mr-auto">En savoir plus <i class="fa-light fa-arrow-right ml-3 text-lg"></i></button>
-                <img src={local.project.mainPhoto} alt={local.project.title} className="w-full rounded-tl-3xl mt-auto" />
+                <img src={local.project.mainPhoto} alt={local.project.title} loading="lazy" className="w-full rounded-tl-3xl mt-auto" />
             </div>
         </Link>
     );

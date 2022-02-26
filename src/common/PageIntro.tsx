@@ -1,9 +1,9 @@
 import { Link, useLocation } from "solid-app-router";
 import { Component, Show, splitProps } from "solid-js";
 
-const PageIntro: Component<{title: string, subtitle: string, image: string, firstParagraph?: string, secondParagraph?: string, button?: boolean, buttonName?: string, buttonLink?: string, buttonTarget?: '_blank' | '_self'}> = (props) => {
+const PageIntro: Component<{title: string, subtitle: string, image: string, imageAlt: string, firstParagraph?: string, secondParagraph?: string, button?: boolean, buttonName?: string, buttonLink?: string, buttonTarget?: '_blank' | '_self'}> = (props) => {
 
-    const [local, others] = splitProps(props, ['title', 'subtitle', 'image', 'firstParagraph', 'secondParagraph', 'button', 'buttonName', 'buttonLink', 'buttonTarget']);
+    const [local, others] = splitProps(props, ['title', 'subtitle', 'image', 'imageAlt', 'firstParagraph', 'secondParagraph', 'button', 'buttonName', 'buttonLink', 'buttonTarget']);
 
     const location = useLocation();
 
@@ -45,7 +45,7 @@ const PageIntro: Component<{title: string, subtitle: string, image: string, firs
                 </div>
                 <Show when={local.image} fallback={<div>No image</div>}>
                     <div className="relative mx-auto md:ml-auto mb-5 md:mb-auto bg-gradient-to-t from-amber-grey to-amber-500 h-72 md:h-96 w-72 md:w-96 order-first md:order-last">
-                        <img src={local.image} className="w-full absolute bottom-3 right-3" alt="Bryan BERGER" />
+                        <img src={local.image} className="w-full absolute bottom-3 right-3" loading="lazy" alt={local.imageAlt} />
                     </div>
                 </Show>
             </div>

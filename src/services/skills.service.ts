@@ -1,21 +1,21 @@
 import Skill from "../interfaces/skill.interface";
 import SkillsGroup from "../interfaces/skills-group.interface";
 
-import firebaseLogo from "../assets/Firebase_logo.png";
-import mongoDBLogo from "../assets/MongoDB_logo.png";
-import rethinkDBLogo from "../assets/RethinkDB_logo.png";
-import nodeJSLogo from "../assets/Nodejs_logo.png";
-import nestJSLogo from "../assets/NestJS_logo.svg";
-import angularLogo from "../assets/Angular_logo.png";
-import angularMaterialLogo from "../assets/AngularMaterial_logo.png";
-import ionicLogo from "../assets/Ionic_logo.png"
-import bootstrapLogo from "../assets/Bootstrap_logo.png";
-import materializeLogo from "../assets/Materialize_logo.png";
-import tailwindCSSLogo from "../assets/TailwindCSS_logo.png";
-import vsCodeLogo from "../assets/VisualStudioCode_logo.png";
-import gitLogo from "../assets/Git_logo.png";
-import appleLogo from "../assets/Apple_logo.png";
-import adobeXDLogo from "../assets/AdobeXD_logo.png";
+import firebaseLogo from "../assets/skills/Firebase_logo.png";
+import mongoDBLogo from "../assets/skills/MongoDB_logo.png";
+import rethinkDBLogo from "../assets/skills/RethinkDB_logo.png";
+import nodeJSLogo from "../assets/skills/Nodejs_logo.png";
+import nestJSLogo from "../assets/skills/NestJS_logo.svg";
+import angularLogo from "../assets/skills/Angular_logo.png";
+import angularMaterialLogo from "../assets/skills/AngularMaterial_logo.png";
+import ionicLogo from "../assets/skills/Ionic_logo.png"
+import bootstrapLogo from "../assets/skills/Bootstrap_logo.png";
+import materializeLogo from "../assets/skills/Materialize_logo.png";
+import tailwindCSSLogo from "../assets/skills/TailwindCSS_logo.png";
+import vsCodeLogo from "../assets/skills/VisualStudioCode_logo.png";
+import gitLogo from "../assets/skills/Git_logo.png";
+import appleLogo from "../assets/skills/Apple_logo.png";
+import adobeXDLogo from "../assets/skills/AdobeXD_logo.png";
 
 const skills: Skill[] = [
     {

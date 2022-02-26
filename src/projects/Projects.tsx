@@ -14,7 +14,7 @@ const Projects: Component = () => {
 
     return(
         <>
-            <PageIntro title="Mes projets" subtitle="Pro et perso" image={bryanWork} firstParagraph="Retrouvez ici tous mes projets web et mobile. Mais pas seulement ! Vous y verrez aussi mes projets personnels." />
+            <PageIntro title="Mes projets" subtitle="Pro et perso" image={bryanWork} imageAlt="Bryan BERGER" firstParagraph="Retrouvez ici tous mes projets web et mobile. Mais pas seulement ! Vous y verrez aussi mes projets personnels." />
             <div className="container mx-auto py-10">
             <div className="flex">
                 <h2 className="mx-auto text-2xl md:text-4xl">
