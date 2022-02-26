@@ -16,6 +16,8 @@ import vsCodeLogo from "../assets/skills/VisualStudioCode_logo.png";
 import gitLogo from "../assets/skills/Git_logo.png";
 import appleLogo from "../assets/skills/Apple_logo.png";
 import adobeXDLogo from "../assets/skills/AdobeXD_logo.png";
+import solidJSLogo from "../assets/skills/SolidJS_logo.jpg";
+import reactLogo from "../assets/skills/ReactJS_logo.png";
 
 const skills: Skill[] = [
     {
@@ -77,9 +79,39 @@ const skills: Skill[] = [
     {
         name: 'Adobe XD',
         imageUrl: adobeXDLogo
+    },
+    {
+        name: 'SolidJS',
+        imageUrl: solidJSLogo
+    },
+    {
+        name: 'React',
+        imageUrl: reactLogo
     }
 ];
 const skillGroups: SkillsGroup[] = [
+    {
+        title: 'Frontend',
+        color: '#EB5E28',
+        icon: 'fa-light fa-desktop',
+        skills: [
+            skills[5],
+            skills[6],
+            skills[7],
+            // skills[15],
+            // skills[16]
+        ]
+    },
+    {
+        title: 'Frameworks CSS',
+        color: '#FF499E',
+        icon: 'fa-light fa-window',
+        skills: [
+            skills[8],
+            skills[9],
+            skills[10]
+        ]
+    },
     {
         title: 'Bases de données',
         color: '#3590F3',
@@ -98,26 +130,6 @@ const skillGroups: SkillsGroup[] = [
             skills[0],
             skills[3],
             skills[4]
-        ]
-    },
-    {
-        title: 'Frontend',
-        color: '#EB5E28',
-        icon: 'fa-light fa-desktop',
-        skills: [
-            skills[5],
-            skills[6],
-            skills[7]
-        ]
-    },
-    {
-        title: 'Frameworks CSS',
-        color: '#FF499E',
-        icon: 'fa-light fa-window',
-        skills: [
-            skills[8],
-            skills[9],
-            skills[10]
         ]
     },
     {

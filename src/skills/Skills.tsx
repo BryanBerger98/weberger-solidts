@@ -12,7 +12,7 @@ const Skills: Component = () => {
 
     return(
         <>
-            <PageIntro title="Compétences" subtitle="Humaines et techniques" image={bryanWork} imageAlt="Bryan BERGER" firstParagraph="Retrouvez ici toutes mes compétences et les technologies associées." />
+            <PageIntro title="Compétences" subtitle="Full Stack" image={bryanWork} imageAlt="Bryan BERGER" firstParagraph="Retrouvez ici toutes mes compétences et les technologies associées." />
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:px-10 pt-10 pb-20">
                 <For each={skillGroups}>
                     {(skillGroup) => (

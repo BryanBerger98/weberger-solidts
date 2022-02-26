@@ -11,12 +11,12 @@ const SkillsGroup: Component<{skillGroup: SkillsGroupInterface}> = (props) => {
                     <i className={local.skillGroup.icon}></i>
                     <span className="ml-3">{ local.skillGroup.title }</span>
                 </h3>
-                <div className="flex py-5 lg:py-0">
+                <div className="flex py-5 lg:py-0 flex-wrap justify-around">
                     <For each={local.skillGroup.skills}>
                         {(skill) => (
                             <div className="m-auto h-20 w-20 lg:h-28 lg:w-28 lg:m-5 xl:m-10 flex flex-col">
                                 <div className="mt-auto p-1">
-                                    <img src={skill.imageUrl} alt={skill.name + ' logo'} loading="lazy" className="w-3/4 mx-auto"/>
+                                    <img src={skill.imageUrl} alt={skill.name + ' logo'} loading="lazy" className="w-3/4 mx-auto rounded-2xl"/>
                                 </div>
                                 <p className="text-center lg:text-xl mt-auto">{skill.name}</p>
                             </div>
