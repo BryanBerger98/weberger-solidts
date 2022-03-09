@@ -5,6 +5,7 @@ import Navbar from './common/Navbar';
 import Skills from './skills/Skills';
 import Projects from './projects/Projects';
 import SingleProject from './projects/SingleProject';
+import Terms from './Terms';
 
 const App: Component = () => {
   return (
@@ -15,6 +16,7 @@ const App: Component = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<SingleProject />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="/*all" element={<Home />} />
       </Routes>
     </>

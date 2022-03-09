@@ -11,7 +11,7 @@ const Footer: Component = () => {
                     <span>connectés</span>
                 </h2>
                 <hr className="border-0 bg-white h-0.5 mb-5 w-full lg:w-3/4" />
-                <p className="text-xl">© 2022 WeBerger</p>
+                <p className="text-xl">© 2022 WeBerger - <Link href="/terms" className="text-amber-400 hover:underline">Mentions légales</Link></p>
             </div>
             <div className="flex">
                 <nav class="mx-auto md:mr-0 md:ml-auto pt-10 md:pt-0">
