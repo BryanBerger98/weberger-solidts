@@ -4,6 +4,7 @@ import joinerWebsite from "../assets/joiner_website.jpeg";
 import iziADashboard from "../assets/iziA_dashboard.jpeg";
 import fitFoodReceipes from "../assets/FitFood/fitfood_receipes_cropped.jpg";
 import campingCar from "../assets/camping_car.jpeg";
+import crossfitLaFontaineWebsite from "../assets/crossfit_la_fontaine_website.jpeg";
 
 const projects: Project[] = [
     {
@@ -33,6 +34,21 @@ const projects: Project[] = [
             hasInternalUrl: true
         },
         showOnHomePage: true
+    },
+    {
+        title: 'CrossFit La Fontaine',
+        subtitle: 'Site web pour la salle de sport CrossFit La Fontaine à Château-Thierry',
+        category: 'website',
+        type: 'professional',
+        description: 'Le gérant de la salle CrossFit la Fontaine avait besoin de remettre son site web à neuf et de booster son référencement ainsi qu\'une petite interface d\'administration !',
+        mainPhoto: crossfitLaFontaineWebsite,
+        technologies: [5, 8, 0],
+        projectUrl: {
+            hasInternalUrl: true,
+            externalUrl: 'https://crossfit-lafontaine.com',
+            externalTarget: '_blank'
+        },
+        showOnHomePage: false
     },
     {
         title: 'FitFood',
