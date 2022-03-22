@@ -87,6 +87,10 @@ const skills: Skill[] = [
     {
         name: 'React',
         imageUrl: reactLogo
+    },
+    {
+        name: 'React Native',
+        imageUrl: reactLogo
     }
 ];
 const skillGroups: SkillsGroup[] = [
@@ -96,10 +100,17 @@ const skillGroups: SkillsGroup[] = [
         icon: 'fa-light fa-desktop',
         skills: [
             skills[5],
-            skills[6],
+            skills[16],
+            skills[15]
+        ]
+    },
+    {
+        title: 'Mobile',
+        color: '#26F0F1',
+        icon: 'fa-light fa-mobile-notch',
+        skills: [
             skills[7],
-            // skills[15],
-            // skills[16]
+            skills[17]
         ]
     },
     {
