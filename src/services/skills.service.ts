@@ -18,6 +18,7 @@ import appleLogo from "../assets/skills/Apple_logo.png";
 import adobeXDLogo from "../assets/skills/AdobeXD_logo.png";
 import solidJSLogo from "../assets/skills/SolidJS_logo.jpg";
 import reactLogo from "../assets/skills/ReactJS_logo.png";
+import expoLogo from "../assets/skills/Expo_logo.png";
 
 const skills: Skill[] = [
     {
@@ -91,6 +92,10 @@ const skills: Skill[] = [
     {
         name: 'React Native',
         imageUrl: reactLogo
+    },
+    {
+        name: 'Expo',
+        imageUrl: expoLogo
     }
 ];
 const skillGroups: SkillsGroup[] = [
@@ -110,7 +115,8 @@ const skillGroups: SkillsGroup[] = [
         icon: 'fa-light fa-mobile-notch',
         skills: [
             skills[7],
-            skills[17]
+            skills[17],
+            skills[18]
         ]
     },
     {
