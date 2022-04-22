@@ -62,6 +62,11 @@ const Navbar: Component = () => {
                             Projets
                         </Link>
                     </li>
+                    <li className="px-2 md-my-auto font-light text-lg">
+                        <Link href="https://medium.com/@bryan.berger98" target="_blank">
+                            Blog
+                        </Link>
+                    </li>
                     {/* <li className="px-2 md:my-auto font-light text-lg">Mon parcours</li> */}
                     <li className="px-2 md:my-auto font-light text-lg">
                         <Link href="https://www.linkedin.com/in/bryanbrg/" target="_blank">Travailler ensemble</Link>

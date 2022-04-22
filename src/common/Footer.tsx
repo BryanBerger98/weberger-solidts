@@ -5,7 +5,7 @@ const Footer: Component = () => {
 
     return(
         <footer className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:px-10 lg:pt-10 pb-20">
-            <div className="px-5 md:px-0">
+            <div className="px-5 md:px-0 mt-auto">
                 <h2 className="text-4xl font-bold flex flex-col mb-3">
                     <span>Restons</span>
                     <span>connectés</span>
@@ -22,6 +22,11 @@ const Footer: Component = () => {
                         <li className="text-3xl">
                             <Link href="https://github.com/BryanBerger98" target="_blank">
                                 GitHub
+                            </Link>
+                        </li>
+                        <li className="text-3xl">
+                            <Link href="https://www.youtube.com/channel/UCCdFltUcI4kquBPHDhCko2Q" target="_blank">
+                                YouTube
                             </Link>
                         </li>
                         <li>
